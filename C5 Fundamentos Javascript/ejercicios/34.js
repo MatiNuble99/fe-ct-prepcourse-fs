@@ -3,10 +3,11 @@
 function elevarAlCuadrado(num) {
   // Retorna el valor de "num" elevado al cuadrado.
   // Tu código:
-  const base = num;
-    const exponente = 2;
-    const resultado = Math.pow(base,exponente);
-    return resultado;
+  // const base = num;
+  //   const exponente = 2;
+  //   const resultado = Math.pow(base,exponente);
+  //   return resultado;
+  return Math.pow(num, 2);
 }
 
 module.exports = elevarAlCuadrado;
