@@ -3,6 +3,13 @@ function agregarAmigo(objetoUsuario, nuevoAmigo) {
   // Debes agregar el "nuevoAmigo" al final de este arreglo.
   // Retornar el objeto.
   // Tu código:
+  if (
+    objetoUsuario.hasOwnProperty("amigos") &&
+    objetoUsuario.amigos.length >= 1
+  ) {
+    objetoUsuario.amigos.push(nuevoAmigo);
+  }
+  return objetoUsuario;
 }
 
 module.exports = agregarAmigo;
