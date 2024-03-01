@@ -8,8 +8,13 @@ function invertirArray(array) {
   //   nuevoArray.push(array[i]);
   // }
   // return nuevoArray;
-  console.log(array.reverse());
-  return array.reverse();
+  if (array.length > 1) {
+    return array.reverse();
+  } else return array;
 }
-invertirArray([9, 8, 7, 6, 5, 4, 3, 2, 1]);
+
+let array1 = [1, 2, 3];
+let array2 = [1, "hola", true, null, undefined];
+let array4 = [];
+let array3 = [4];
 module.exports = invertirArray;
