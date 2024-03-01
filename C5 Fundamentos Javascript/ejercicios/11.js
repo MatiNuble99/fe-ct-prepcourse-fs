@@ -6,11 +6,16 @@ function esMayorDeEdad(fechaNacimiento) {
   // PISTA: Investiga el método getFullYear() de la clase Date para obtener el año actual.
   // Tu código:
   var añoActual = new Date().getFullYear(); //new Date = fecha de hoy y getFullYear = año (saca el año de la fecha de hoy)
-  var año = fechaNacimiento.getFullYear();
-  var añosResta = añoActual - año;
-  if (añosResta >= 18) {
+  var añoUsuario = fechaNacimiento.getFullYear(); //da el año de la fecha del argumento
+  var añosResta = añoActual - añoUsuario;
+  if (añosResta > 17) {
     return true;
   } else return false;
 }
-
+/**Calculos Auxiliars
+ * 2024 - 1999 = 25
+ * tengo que crear varaible para el año actua
+ * otra variable para el año de la fecha ingresada
+ * restar esas variables
+ */
 module.exports = esMayorDeEdad;

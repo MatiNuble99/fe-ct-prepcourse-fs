@@ -4,25 +4,29 @@ function fizzBuzz(num) {
   // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
   // De lo contrario, retorna false.
   // Tu código:
-  if (num % 3 === 0 && num % 5 === 0) {
-    return "fizzbuzz";
-  } else if (num % 3 === 0) {
-    return "fizz";
-  } else if (num % 5 === 0) {
-    return "buzz";
-  } else {
-    return false;
-  }
-  if (num % 3 === 0 && num % 5 === 0) {
-    return "fizzbuzz";
-  }
-
-  // if (num % 3 === 0) {
+  // if (num % 3 === 0 && num % 5 === 0) {
+  //   return "fizzbuzz";
+  // } else if (num % 3 === 0) {
   //   return "fizz";
-  // }
-  // if (num % 5 === 0) {
+  // } else if (num % 5 === 0) {
   //   return "buzz";
-  // } else return false;
+  // } else {
+  //   return false;
+  // }
+  switch (num) {
+    case num % 3 === 0 && num % 5 === 0:
+      return "fizzbuzz";
+      break;
+    case num % 3 === 0:
+      return "fizz";
+      break;
+    case num % 5 === 0:
+      return "buzz";
+
+    default:
+      false;
+      break;
+  }
 }
 
 module.exports = fizzBuzz;
