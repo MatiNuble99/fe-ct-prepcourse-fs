@@ -3,12 +3,18 @@ function encontrarPrimerMultiploDeN(n, secuencia) {
   // Devuelve el primer múltiplo de n que encuentres en la secuencia de números.
   // Usa un break para detener el bucle una vez halles el múltiplo.
   // Tu código:
-
-  for (var i = 0; i < secuencia.length; i++) {
-    if (secuencia[i] % n === 0) {
-      return secuencia[i];
-    } else return undefined;
+  //numerosdesecuencia/n==0 son multiplos
+  for (num of secuencia) {
+    if (num % n === 0) {
+      return num;
+    }
   }
+  return undefined;
+  // for (var i = 0; i < secuencia.length; i++) {
+  //   if (secuencia[i] % n === 0) {
+  //     return secuencia[i];
+  //   } else return undefined;
+  // }
 }
 
 module.exports = encontrarPrimerMultiploDeN;

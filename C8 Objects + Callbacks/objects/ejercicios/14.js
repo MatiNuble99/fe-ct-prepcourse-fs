@@ -4,7 +4,7 @@ function tieneEmail(objetoUsuario) {
   // Tu código:
 
   for (const key in objetoUsuario) {
-    if (key === "email" && objetoUsuario[key] !== null) {
+    if (key === "email" && objetoUsuario[key] !== undefined) {
       return true;
     }
   }

@@ -23,6 +23,7 @@ function deObjetoAarray(objeto) {
 
 let objeto = { D: 1, B: 2, C: 3 };
 console.log(deObjetoAarray(objeto));
+
 function numberOfCharacters(string) {
   // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
   // letras del string, y su valor es la cantidad de veces que se repite en el string.
@@ -87,36 +88,62 @@ function capToFront(string) {
   return mayusculas + minusculas;
 }
 
-let string = "soyHENRY";
-console.log(capToFront(string));
+// let string = "soyHENRY";
+// console.log(capToFront(string));
+
 function asAmirror(frase) {
   // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
   // La diferencia es que cada palabra estará escrita al inverso.
   // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
   // Tu código:
-  console.log(frase)
-  console.log(frase.length)
-  let nuevaFrase=""
-  for (let index = 0; index < frase.length; index++) {
-console.log(frase[index])
-let acumulador =0
-acumulador = frase[index]+acumulador
-    if(frase[index]=== " ")
-  }
-  
-}
-let frase = "The Henry Challenge is close!";
-console.log(asAmirror(frase));
-function capicua(numero) {
-  // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
-  // Caso contrario: "No es capicua".
-  // Tu código:
+
+  // Dividir la frase en palabras individuales
+  var palabras = frase.split(" ");
+  console.log(palabras);
+  // Iterar sobre cada palabra y revertirla
+  var palabrasInvertidas = palabras.map(function (palabra) {
+    return palabra.split("").reverse().join("");
+  });
+  console.log(palabrasInvertidas);
+  // Unir las palabras invertidas en un nuevo string
+  var fraseInvertida = palabrasInvertidas.join(" ");
+
+  // Retornar la frase con las palabras invertidas
+  return fraseInvertida;
 }
 
+let frase = "The Henry Challenge is close!";
+console.log(asAmirror(frase));
+
+function capicua(numero) {
+  // Si el número que recibes es capicúa debes retr el string: "Es capicua".
+  // Caso contrario: "No es capicua".
+  // Tu código:
+  var numeroStr = numero.toString();
+  console.log(numeroStr);
+  console.log(numeroStr.charAt(i));
+  var longitud = numeroStr.length;
+  console.log(longitud);
+
+  for (var i = 0; i < longitud; i++) {
+    for (var j = longitud - 1; j >= 0; j--)
+      if (numeroStr[i] === numeroStr[j]) {
+        return "Es capicua";
+      } else return "No es capicua";
+  }
+}
+let numero = 2332;
+console.log(capicua(numero));
 function deleteAbc(string) {
   // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
   // Retorna el string sin estas letras.
   // Tu código:
+  var arrayLetras = string.toLowerCase().split("");
+  var eliminarLetrasDelArray = arrayLetras.filter(function (element) {
+    return element !== "a" && element !== "b" && element !== "c";
+  });
+  var nuevoString = eliminarLetrasDelArray.join("");
+  return nuevoString;
 }
 
 function sortArray(arrayOfStrings) {
@@ -125,6 +152,14 @@ function sortArray(arrayOfStrings) {
   // de la longitud de cada string.
   // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
   // Tu código:
+  var newArray = [];
+  for (let index = 0; index < arrayOfStrings.length; index++) {
+    for (let j = 1; j < arrayOfStrings.length; j++) {
+      if (arrayOfStrings[index].length <= arrayOfStrings[j].lenght) {
+        return newArray.push(arrayOfStrings[index]);
+      } else return newArray.push(arrayOfStrings[j]);
+    }
+  }
 }
 
 function buscoInterseccion(array1, array2) {
@@ -134,6 +169,15 @@ function buscoInterseccion(array1, array2) {
   // Si no tienen elementos en común, retornar un arreglo vacío.
   // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
   // Tu código:
+  var newArray = [];
+  for (let index = 0; index < array1.length; index++) {
+    for (let j = 0; j < array2.length; j++)
+      if (array1[index] === array2[j]) {
+        newArray.push(array1[index]);
+        break;
+      }
+  }
+  return newArray;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

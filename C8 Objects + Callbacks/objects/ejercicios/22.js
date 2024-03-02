@@ -8,8 +8,8 @@ function esAnagrama(str1, str2) {
   if (str1.length !== str2.length) {
     return false;
   }
-  var arr1 = str1.split("").sort().lowerCase();
-  var arr2 = str2.split("").sort().lowerCase();
+  var arr1 = str1.toLowerCase().split("").sort().join("");
+  var arr2 = str2.toLowerCase().split("").sort().join("");
 
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
